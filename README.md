@@ -114,7 +114,7 @@ python infer.py --model data_fasttext/math_cls.bin --text "Let f(x) be a continu
 ```
 
 ### 5.2 重新打标 `__label__other` 样本
-`infer.py` 会扫描训练生成的 `data_fasttext/test.txt`，顺序选取前 **N** 条以 `__label__other` 开头的记录，并使用 `math_cls.bin` 重新预测其标签。结果以 **JSONL** 格式保存，便于后续处理或提交。
+`infer.py` 会扫描训练生成的 `data_fasttext/test.txt`，顺序选取前 **N** 条以 `__label__other` 开头的记录，并使用 `math_cls.bin` 重新预测其标签。
 
 ```bash
 # 重新打标 5 000 条 "other" 样本，并写入 fineweb_relabelled_5000.jsonl
